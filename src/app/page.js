@@ -11,7 +11,7 @@ export default function Home() {
     </div>
     <div className=" flex justify-center gap-3 p-5">
       <Button className="bg-sky-500"> <Link href="http://localhost:3000/createrecipe" >Create recipes</Link> </Button>
-      <Button className="bg-sky-500">Learn new cooking tricks</Button>
+      <Button className="bg-sky-500"><Link href="http://localhost:3000/recipes">Learn new cooking tricks</Link></Button>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 m-5">
       <div className="relative w-full h-64">

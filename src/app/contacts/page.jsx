@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaTwitter } from 'react-icon
 
 export default function Contacts() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen p-8">
       <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
       <p className="text-lg mb-8 text-center max-w-md">
         Feel free to reach out through any of the following channels!
