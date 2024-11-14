@@ -2,9 +2,18 @@ import RecipeCard from '@/components/RecipeCard'
 import prisma from '@/lib/prisma'
 import React from 'react'
 
-const recipePage = async (name, imgUrl, description, ingredients, instructions) => {
+export async function getStaticProps(){
   const newRecipes = await prisma.recipe.findMany()
 
+  return {
+    props : {
+      newRecipes
+    }
+  }
+
+}
+
+const recipePage = ({newRecipes}) => {
   return (
    <div className='grid grid-cols-3'>
     {newRecipes.map(recipe => (
