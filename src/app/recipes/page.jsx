@@ -26,4 +26,3 @@ const recipePage = async () => {
 
 export default recipePage
 
-export const revalidate = 60;
