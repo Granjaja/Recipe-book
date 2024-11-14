@@ -2,18 +2,9 @@ import RecipeCard from '@/components/RecipeCard'
 import prisma from '@/lib/prisma'
 import React from 'react'
 
-export async function getStaticProps(){
+const recipePage = async () => {
   const newRecipes = await prisma.recipe.findMany()
 
-  return {
-    props : {
-      newRecipes
-    }
-  }
-
-}
-
-const recipePage = ({newRecipes}) => {
   return (
    <div className='grid grid-cols-3'>
     {newRecipes.map(recipe => (
@@ -34,3 +25,5 @@ const recipePage = ({newRecipes}) => {
 }
 
 export default recipePage
+
+export const revalidate = 60;
