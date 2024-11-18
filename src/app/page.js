@@ -10,8 +10,8 @@ export default function Home() {
       <h1 className=" flex text-3xl bg-green-500 m-4 h-20 items-center rounded-2xl justify-center">Home of Recipes</h1>
     </div>
     <div className=" flex justify-center gap-3 p-5">
-      <Button className="bg-sky-500"> <Link href="https://code-clause-internship-recipe-book-qmpw-d38kmf2wp.vercel.app/createrecipe" >Create recipes</Link> </Button>
-      <Button className="bg-sky-500"><Link href="https://code-clause-internship-recipe-book-qmpw-d38kmf2wp.vercel.app/recipes">Learn new cooking tricks</Link></Button>
+      <Button className="bg-sky-500"> <Link href="recipe-book/src/app/createrecipe/page.jsx" >Create recipes</Link> </Button>
+      <Button className="bg-sky-500"><Link href="recipe-book/src/app/recipes/page.jsx">Learn new cooking tricks</Link></Button>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 m-5">
       <div className="relative w-full h-64">
