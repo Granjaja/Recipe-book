@@ -17,12 +17,6 @@ const CreateRecipe = async(formData) => {
     })
 
     revalidatePath("/recipes")
-
-  return (
-    <div>
-      
-    </div>
-  )
 }
 
 export default CreateRecipe
