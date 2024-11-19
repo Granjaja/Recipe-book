@@ -13,11 +13,14 @@ const fetchRecipes = async () => {
   } else{
     console.log('Serving recipes from the cache...');
   }
+
+  console.log(newRecipes)
   return newRecipes || [];
+  
 }
 
 const recipePage = async () => {
-  const newRecipes = await fetchRecipes()
+  const newRecipes = await fetchRecipes();
   
   return (
    <div className='grid grid-cols-3'>
