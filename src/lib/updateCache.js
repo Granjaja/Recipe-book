@@ -4,7 +4,7 @@ import { setInCache } from './cache'
 
 const updateCache  = async() =>{
     const updatedRecipes = await prisma.recipe.findMany()
-    setInCache('newRecipes', updateCache)
+    setInCache('newRecipes', updatedRecipes)
 };
-
+//updates every five minutes
 cron.schedule('/5 ****', updateCache)

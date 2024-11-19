@@ -7,7 +7,7 @@ const RecipeCard = ({name, imgUrl, description, ingredients, instructions}) => {
           <h1 className='font-semibold text-xl p-5'>{name}</h1>
         </div>
         <div>
-        <img src={imgUrl} className='w-full h-100 object-cover p-5' alt="meat" />
+        <img src={imgUrl} className='w-full h-100 object-cover p-5' />
         </div> 
         <div className='font-bold p-3'>
         <h3 >{description}</h3>
