@@ -3,7 +3,7 @@ import prisma from './prisma'
 import { setInCache } from './cache'
 
 const updateCache  = async() =>{
-    const updatedRecipes = await prisma.recipe.findMany()
+    const updatedRecipes = await prisma.Recipe.findMany()
     setInCache('newRecipes', updatedRecipes)
     console.log('cache updated')
 };

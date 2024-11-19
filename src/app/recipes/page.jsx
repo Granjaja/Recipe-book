@@ -7,20 +7,23 @@ const fetchRecipes = async () => {
   let newRecipes = getFromCache('newRecipes')
 
   if (!newRecipes) {
-    const newRecipes = await prisma.recipe.findMany()
+    console.log('Fetching recipes from the database...');
+    newRecipes = await prisma.Recipe.findMany()
 
     setInCache('newRecipes', newRecipes)
+    console.log(newRecipes)
   } else{
     console.log('Serving recipes from the cache...');
   }
 
   console.log(newRecipes)
-  return newRecipes || [];
+  return newRecipes;
   
 }
-
+ 
 const recipePage = async () => {
-  const newRecipes = await fetchRecipes();
+  const newRecipes =await fetchRecipes()
+  
   
   return (
    <div className='grid grid-cols-3'>
